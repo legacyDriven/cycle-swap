@@ -7,10 +7,12 @@ class CycleSwap {
     static void cycleSwap(int[] array) {
         if(array.length==0) return;
 
-        int [] temp = new int[array.length];
-        temp[0] = array[array.length-1];
-        System.arraycopy(array, 0, temp, 1, array.length - 1);
-        System.arraycopy(temp, 0, array, 0, array.length);
+        int cycledElement = array[array.length-1];
+
+        System.arraycopy(array, 0, array, 1, array.length - 1);
+
+        array[0] = cycledElement;
+       
     }
 
         static void cycleSwap(int[] array, int shift){
