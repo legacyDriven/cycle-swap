@@ -1,6 +1,7 @@
 package com.epam.rd.autotasks;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 class CycleSwap {
 
@@ -12,7 +13,6 @@ class CycleSwap {
         System.arraycopy(array, 0, array, 1, array.length - 1);
 
         array[0] = cycledElement;
-       
     }
 
         static void cycleSwap(int[] array, int shift){
